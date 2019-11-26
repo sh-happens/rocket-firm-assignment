@@ -1,9 +1,8 @@
-import Navbar from "../components/Navbar";
+import Layout from "../components/Layout";
 
 const History = () => (
-  <div>
-    <Navbar />
-  </div>
+  <Layout>
+    <div>history</div>
+  </Layout>
 );
-
 export default History;

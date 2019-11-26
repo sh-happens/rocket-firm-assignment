@@ -1,9 +1,10 @@
-import Navbar from "../components/Navbar";
+import Fetch from "isomorphic-unfetch";
+import Layout from "../components/Layout";
 
 const Index = () => (
-  <div>
-    <Navbar />
-  </div>
+  <Layout>
+    <div>home</div>
+  </Layout>
 );
 
 export default Index;
