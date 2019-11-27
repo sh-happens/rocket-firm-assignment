@@ -15,7 +15,7 @@ const Navbar = () => (
     <ul>
       <li>
         <Link href='/search'>
-          <div>
+          <div className='navbarItems'>
             <img
               className='magnifier'
               src={magnifier}
@@ -28,7 +28,7 @@ const Navbar = () => (
       </li>
       <li>
         <Link href='/favorites'>
-          <div>
+          <div className='navbarItems'>
             <img className='magnifier' src={heart} alt='heart' id='heart' />
             <a>Избранное</a>
           </div>
@@ -36,7 +36,7 @@ const Navbar = () => (
       </li>
       <li>
         <Link href='/history'>
-          <div>
+          <div className='navbarItems'>
             <img className='history' src={history} alt='history' id='history' />
             <a>История Поиска</a>
           </div>
@@ -50,7 +50,6 @@ const Navbar = () => (
         display: flex;
         justify-content: space-between;
         padding: 0% 15% 0% 15%;
-        align-items: center;
         font-family: SF UI Display;
       }
       ul {
@@ -70,6 +69,10 @@ const Navbar = () => (
       a {
         text-decoration: none;
         color: white;
+      }
+      .navbarItems {
+        display: flex;
+        align-items: center;
       }
       .logoImage {
         height: 28px;
