@@ -88,7 +88,6 @@ const Navbar = () => (
       body {
         margin: 0px;
         padding: 0px;
-        box-sizing: border-box;
       }
       @media only screen and (max-width: 600px) {
         .navContainer {

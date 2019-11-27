@@ -27,15 +27,15 @@ export default function Favorites() {
         <a>Избранное</a>
       </div>
       <div className='iconsContainer'>
-        <div classname='columnIcon'>
+        <div className='columnIcon'>
           <div id='rectangle'></div>
           <div id='rectangle'></div>
         </div>
-        <div classname='wrapIcon'>
+        <div>
           <div id='square'></div>
           <div id='square'></div>
         </div>
-        <div classname='wrapIcon'>
+        <div>
           <div id='square'></div>
           <div id='square'></div>
         </div>
@@ -77,13 +77,13 @@ export default function Favorites() {
         #rectangle {
           width: 23px;
           height: 10px;
-          background: black;
+          background: #bdbdbd;
           margin: 3px 20px;
         }
         #square {
           width: 10px;
           height: 10px;
-          background: #bdbdbd;
+          background: black;
           margin: 2px;
         }
         @media only screen and (max-width: 600px) {
@@ -95,7 +95,19 @@ export default function Favorites() {
           .itemContainer {
             display: flex;
             align-itmes: center;
-            margin: 5px;
+            margin-top: 20px;
+          }
+          .container {
+            display: none;
+          }
+          .iconsContainer {
+            margin-top: 20px;
+          }
+          #rectangle {
+            background: black;
+          }
+          #square {
+            background: #bdbdbd;
           }
         }
       `}</style>
