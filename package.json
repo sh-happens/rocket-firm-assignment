@@ -23,6 +23,10 @@
     "axios": "^0.19.0",
     "next": "^9.1.4",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "next-images": "^1.2.0"
   }
 }

@@ -1,8 +1,4 @@
 import Layout from "../components/Layout";
 
-const History = () => (
-  <Layout>
-    <div>history</div>
-  </Layout>
-);
+const History = props => <div>{props.picture}</div>;
 export default History;
