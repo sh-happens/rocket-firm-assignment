@@ -3,6 +3,25 @@ import axios from "axios";
 import Layout from "../components/Layout";
 
 export default function Search() {
+  const [history, setHistory] = useState([
+    " Wallpapers ",
+    " Textures & Patterns ",
+    " Nature ",
+    " Current ",
+    " Events ",
+    " Architecture ",
+    " Business & Work ",
+    " Film ",
+    " Animals ",
+    " Travel ",
+    " Fashion ",
+    " Food & Drink ",
+    " Spirituality ",
+    " Experimental ",
+    " People ",
+    " Health ",
+    " Arts & Culture"
+  ]);
   const [picture, setPicture] = useState("");
   const [clientId, setClientId] = useState(
     "c2d1a26fc11e773729bada1c8619976fad8ad7595c8d26512db391f178805e78"
@@ -41,7 +60,9 @@ export default function Search() {
           onKeyPress={keyPressed}
         />
       </div>
-      <div className='sugestions'>search sugestions will be displayed here</div>
+      <div className='sugestions'>
+        <a>{history}</a>
+      </div>
       <div className='itemContainer'>
         {result.map(picture => (
           <img className='items' src={picture.urls.small} />
@@ -53,15 +74,24 @@ export default function Search() {
           justify-content: center;
           background: black;
         }
+        a {
+          font-size: 16px;
+          background: -webkit-linear-gradient(left, white, black);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 16px;
+          max-width: 80%;
+        }
         input {
-          background-color: transparent;
+          background-color: black;
           color: white;
           text-align: center;
+          padding: 0;
           font-family: SF UI Display;
           font-size: 50px;
           outline: none;
           border-top-color: transparent;
-          border-bottom-color: #a4036f;
+          border-bottom-color: transparent;
           border-left-color: transparent;
           border-right-color: transparent;
           border-image: linear-gradient(
@@ -70,7 +100,7 @@ export default function Search() {
               rgba(255, 255, 255, 1) 50%,
               rgba(0, 0, 0, 1) 100%
             )
-            0 0 100% 0/0 0 1px 0 stretch;
+            0 0 100% 0/0 0 1px 0;
         }
         input:-webkit-autofill,
         input:-webkit-autofill:hover,
@@ -82,18 +112,21 @@ export default function Search() {
         }
         .sugestions {
           line-height: 40px;
-          background: black;
           display: flex;
           justify-content: center;
           font-family: SF UI Display;
-          font-size: 16px;
+          background: black;
         }
+
         ::placeholder {
           color: white;
         }
         .items {
           margin: 10px;
           border-radius: 5px;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          background-color: black;
         }
         .itemContainer {
           display: flex;
@@ -101,8 +134,13 @@ export default function Search() {
           justify-content: center;
         }
         @media only screen and (max-width: 600px) {
-          input {
-            font-size: 36px;
+          a {
+            text-align: center;
+            padding: 0 15% 0 15%;
+            color: white;
+            background: black;
+            -webkit-text-fill-color: white;
+            font-size: 16px;
           }
         }
       `}</style>
